@@ -14,7 +14,7 @@ jobs:
   Trabalho1:
     name: Job 1
     #Apenas executa se outro trabalho ser executado
-    needs: Trabalho3
+    needs: Trabalho2
     runs-on: ubuntu-latest
     #Agora irei programar os passos do script
     steps:
@@ -26,6 +26,7 @@ jobs:
         run: echo "Executando o terceiro passo"
   Trabalho2:
     name: Job 2
+    needs: Trabalho1
     runs-on: ubuntu-latest
     #Agora irei programar os passos do script
     steps:
